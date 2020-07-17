@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-2"
+  region                  = "ap-southeast-2"
   shared_credentials_file = ".aws/credentials"
 }
 
@@ -14,14 +14,14 @@ data "aws_iam_policy_document" "lambda" {
 }
 
 resource "aws_iam_role" "lambda" {
-  name = "lambda"
+  name               = "lambda"
   assume_role_policy = data.aws_iam_policy_document.lambda.json
 }
 
 data "archive_file" "lambda" {
   type        = "zip"
-  output_path = "build/index.js.zip"
   source_dir  = "lambda"
+  output_path = "build/index.js.zip"
 }
 
 resource "aws_lambda_function" "bucket_notification" {
