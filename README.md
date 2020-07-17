@@ -35,7 +35,7 @@ The S3 notification uses a suffix filter so it will only trigger on files that e
 
 ## Testing
 
-Navigate to the `lambda` directory and run `yarn test`. This will send a mock S3 event to the lambda function and verify a successful response from Twilio.
+Navigate to the `lambda` directory and run `yarn test`. This will send a mock S3 event to the Lambda function and verify a successful response from Twilio. Integration testing is currently done manually, by uploading a .log file to the bucket in the AWS console.
 
 ## Deployment / Automation
 
@@ -43,7 +43,7 @@ All cloud resources are defined using Terraform in `main.tf`. Currently deployme
 
 ## Operational Supportability
 
-The lambda function can be monitored in the AWS CloudWatch dashboard.
+The Lambda function can be monitored in the AWS CloudWatch dashboard.
 
 ## Issues
 
