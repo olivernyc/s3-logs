@@ -1,0 +1,16 @@
+{
+	"dependencies": {
+		"dotenv": "^8.2.0",
+		"twilio": "^3.48.0"
+	},
+	"devDependencies": {
+		"aws-event-mocks": "^0.0.0",
+		"jest": "^26.1.0"
+	},
+	"scripts": {
+		"test": "jest"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	}
+}
